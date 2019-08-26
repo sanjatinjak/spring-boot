@@ -1,7 +1,7 @@
 # spring-boot
 Projekt urađen za vježbu koristeći Spring Boot framework
 
-Korištene tehnologije : Spring Boot, Maven, Thymeleaf, Hibernate/JPA, PostgreSQL ( HTML, CSS, Boostrap za Front-End dio)
+Korištene tehnologije : Spring Boot, Maven, Thymeleaf, Hibernate/JPA, PostgreSQL ( HTML, CSS, Bootstrap za Front-End dio)
 
 Pristupni podaci : 
 
