@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<link href="webjars/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet">
+
+
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/dashboard}">Profesor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/dashboard}">Početna <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/showStudents}">Studenti <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" th:object="${prof}">
+                <!--/*@thymesVar id="id" type="com.sanjatinjak.students.model.Professor"*/-->
+                <a class="nav-link" th:href="@{'/profile/' + ${prof.id}}">Uredi profil</a>
+
+            </li>
+
+        </ul>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0" th:action="@{/logout}">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Odjavi se</button>
+    </form>
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <br>
+    <br>
+    <br>
+
+    <p>
+        Ovo je projekt urađen za vježbu koristeći Spring Boot framework. Tema projekta je evidencija studenata određenog profesora na kolegiju koji on predaje.<br>
+        Implementirana je samo jedna ROLE, to jest USER(profesor).
+        <br>
+        <br>
+        <br>
+        <br>
+        <b>Funkcionalnosti :</b>
+
+        <br>
+        <br>
+        &#9758;Prijava (login)<br>
+        &#9758;Odjava (logout)<br>
+
+        <br>
+        <br>
+        &#9758;Pregled studenata po kolegijima<br>
+        &#9758;Ispis studenta sa kolegija<br>
+        <br>
+        <br>
+        &#9758;Uređivanje podataka o profilu profesora
+    </p>
+</div>
+
+</body>
+
+<script src="webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.0.0/jquery.min.js"></script>
+
+</html>
